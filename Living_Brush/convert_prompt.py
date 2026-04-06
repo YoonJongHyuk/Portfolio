@@ -44,10 +44,6 @@ load_local_env()
 COMFYUI_IP = os.getenv("COMFYUI_IP", "127.0.0.1:9000")
 
 
-# 대구에서 로컬로 돌릴때 쓰는 ip
-#COMFYUI_IP = "127.0.0.1:9000"
-
-# CUDA_VISIBLE_DEVICES=0 python main.py --port 9000 --listen 0.0.0.0
 
 
 app = FastAPI()
@@ -703,24 +699,4 @@ async def rag_search(q: Question):
 
 
 
-#------------------ AI UI 챗봇 팔렛트 -----------------------
 
-# fast api 서울
-# CUDA_VISIBLE_DEVICES=0 uvicorn convert_prompt:app --host 0.0.0.0 --port 58021
-
-# fast api 대구
-# uvicorn convert_prompt:app --reload --port 8080
-
-# ollama 서울
-# CUDA_VISIBLE_DEVICES=0 ollama serve
-
-# ollama 대구
-# ollama serve
-
-# comfyui 서울
-# CUDA_VISIBLE_DEVICES=0 python main.py --port 58022 --listen 0.0.0.0
-
-# comfyui 대구
-# python main.py
-
-# conda activate yoon
